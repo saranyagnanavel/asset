@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.assetmanagement.web.loginwindow.ExtAppLoginWindow"
+        extends="/com/haulmont/cuba/web/app/loginwindow/loginwindow.xml"
+        messagesPack="com.company.assetmanagement.web.loginwindow">
+    <layout>
+        <vbox id="loginWrapper">
+            <vbox id="loginMainBox">
+                <hbox id="loginTitleBox">
+                    <label id="welcomeLabel"
+                           value="Login"/>
+                </hbox>
+                <grid id="loginFormLayout">
+                    <rows>
+                        <row id="loginFieldRow">
+                            <label id="loginFieldLabel"
+                                   value="User_Name"/>
+                        </row>
+                        <row id="passwordFieldRow">
+                            <label id="passwordFieldLabel"
+                                   value="Password"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </vbox>
+    </layout>
+</window>

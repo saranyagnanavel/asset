@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.assetmanagement.web.add_asset.Add_AssetBrowse"
+        focusComponent="add_AssetsTable"
+        lookupComponent="add_AssetsTable"
+        messagesPack="com.company.assetmanagement.web.add_asset">
+    <dsContext>
+        <collectionDatasource id="add_AssetsDs"
+                              class="com.company.assetmanagement.entity.Add_Asset"
+                              view="_local">
+            <query>
+                <![CDATA[select e from assetmanagement$Add_Asset e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="add_AssetsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="add_AssetsTable"
+                datasource="add_AssetsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="add_AssetsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="asset_Id"/>
+                <column id="name"/>
+                <column id="company"/>
+                <column id="supplier"/>
+                <column id="status"/>
+                <column id="model_number"/>
+                <column id="serial_number"/>
+                <column id="purchase_date"/>
+                <column id="purchase_cost"/>
+            </columns>
+            <rows datasource="add_AssetsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="add_AssetsTable.create"/>
+                <button id="editBtn"
+                        action="add_AssetsTable.edit"/>
+                <button id="removeBtn"
+                        action="add_AssetsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

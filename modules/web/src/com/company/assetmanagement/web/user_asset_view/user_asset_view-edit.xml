@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.assetmanagement.web.user_asset_view.User_Asset_ViewEdit"
+        datasource="user_Asset_ViewDs"
+        messagesPack="com.company.assetmanagement.web.user_asset_view">
+    <dsContext>
+        <datasource id="user_Asset_ViewDs"
+                    class="com.company.assetmanagement.entity.User_Asset_View"
+                    view="_minimal"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout/>
+</window>

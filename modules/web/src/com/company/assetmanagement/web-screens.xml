@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="com/company/assetmanagement/screens.xml"/>
+    <screen id="loginWindow"
+            template="com/company/assetmanagement/web/loginwindow/ext-loginwindow.xml"/>
+    <screen id="assetmanagement$Add_Asset.browse"
+            template="com/company/assetmanagement/web/add_asset/add_asset-browse.xml"/>
+    <screen id="assetmanagement$Add_Asset.edit"
+            template="com/company/assetmanagement/web/add_asset/add_asset-edit.xml"/>
+    <screen id="assetmanagement$Request.browse"
+            template="com/company/assetmanagement/web/request/request-browse.xml"/>
+    <screen id="assetmanagement$Request.edit"
+            template="com/company/assetmanagement/web/request/request-edit.xml"/>
+    <screen id="assetmanagement$Order_Status.edit"
+            template="com/company/assetmanagement/web/order_status/order_status-edit.xml"/>
+    <screen id="assetmanagement$Order_Status.browse"
+            template="com/company/assetmanagement/web/order_status/order_status-browse.xml"/>
+    <screen id="assetmanagement$User_Asset_View.browse"
+            template="com/company/assetmanagement/web/user_asset_view/user_asset_view-browse.xml"/>
+    <screen id="assetmanagement$User_Asset_View.edit"
+            template="com/company/assetmanagement/web/user_asset_view/user_asset_view-edit.xml"/>
+    <screen id="mainWindow.xml"
+            template="com/company/assetmanagement/web/mainwindow/ext-mainwindow.xml"/>
+    <screen id="screens.xml"
+            template="com/company/assetmanagement/web/mainwindow/ext-mainwindow.xml"/>
+    <screen id="mainwindow.xml"
+            template="com/company/assetmanagement/web/mainwindow/ext-mainwindow.xml"/>
+</screen-config>

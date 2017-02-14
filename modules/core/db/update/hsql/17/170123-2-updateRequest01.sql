@@ -1,0 +1,1 @@
+alter table ASSETMANAGEMENT_REQUEST add constraint FK_ASSETMANAGEMENT_REQUEST_ASSET foreign key (ASSET_ID) references SEC_USER(ID);

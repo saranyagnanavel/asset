@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.assetmanagement.gui.aboutwindow.ExtAboutWindow"
+        extends="/com/haulmont/cuba/gui/app/core/about/about-window.xml"
+        messagesPack="com.company.assetmanagement.gui.aboutwindow">
+    <layout/>
+</window>

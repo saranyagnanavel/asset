@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.assetmanagement.web.order_status.Order_StatusBrowse"
+        focusComponent="order_StatusesTable"
+        lookupComponent="order_StatusesTable"
+        messagesPack="com.company.assetmanagement.web.order_status">
+    <dsContext>
+        <collectionDatasource id="order_StatusesDs"
+                              class="com.company.assetmanagement.entity.Order_Status"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from assetmanagement$Order_Status e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="order_StatusesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="order_StatusesTable"
+                datasource="order_StatusesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="order_StatusesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="requested_asset"/>
+                <column id="current_status"/>
+            </columns>
+            <rows datasource="order_StatusesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="order_StatusesTable.create"/>
+                <button id="editBtn"
+                        action="order_StatusesTable.edit"/>
+                <button id="removeBtn"
+                        action="order_StatusesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
