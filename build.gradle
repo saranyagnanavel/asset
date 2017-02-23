@@ -21,14 +21,14 @@ buildscript {
 }
 
 def globalModule = project(':app-global')
+def webThemesModule= project(':app-web-themes')
 def coreModule = project(':app-core')
 def guiModule = project(':app-gui')
 def webModule = project(':app-web')
 
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
-
-
-apply(plugin: 'idea')
+apply(plugin: 'eclipse')
+apply(plugin: 'java')
 apply(plugin: 'cuba')
 
 cuba {
@@ -47,8 +47,8 @@ def hsql = 'org.hsqldb:hsqldb:2.2.9'
 configure([globalModule, coreModule, guiModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
-    apply(plugin: 'cuba')
+    apply(plugin: 'eclipse')
+apply(plugin: 'cuba')
 
     dependencies {
         testCompile('junit:junit:4.12')
@@ -69,6 +69,28 @@ configure(globalModule) {
     
     
 }
+configure(webThemesModule) {
+    apply(plugin: 'java')
+    apply(plugin: 'maven')
+    apply(plugin: 'eclipse')
+apply(plugin: 'cuba')
+
+    appModuleType = 'web-themes'
+
+    buildDir = file('../build/scss-themes')
+
+    sourceSets {
+        main {
+            java {
+                srcDir '.'
+            }
+            resources {
+                srcDir '.'
+            }
+        }
+    }
+}
+
 
 configure(coreModule) {
 
@@ -174,6 +196,9 @@ configure(webModule) {
         appName = 'app'
         appJars('app-global', 'app-gui', 'app-web')
     }
+    task buildScssThemes(type: CubaWebScssThemeCreation)
+    task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
+    assemble.dependsOn buildScssThemes
 }
 
 

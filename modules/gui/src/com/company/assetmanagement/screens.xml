@@ -2,4 +2,6 @@
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
     <screen id="screens.xml"
             template="com/company/assetmanagement/gui/aboutwindow/ext-about-window.xml"/>
+    <screen id="screen"
+            template="com/company/assetmanagement/gui/screens/screen.xml"/>
 </screen-config>
