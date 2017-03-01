@@ -21,7 +21,6 @@ buildscript {
 }
 
 def globalModule = project(':app-global')
-def webThemesModule= project(':app-web-themes')
 def coreModule = project(':app-core')
 def guiModule = project(':app-gui')
 def webModule = project(':app-web')
@@ -69,28 +68,6 @@ configure(globalModule) {
     
     
 }
-configure(webThemesModule) {
-    apply(plugin: 'java')
-    apply(plugin: 'maven')
-    apply(plugin: 'eclipse')
-apply(plugin: 'cuba')
-
-    appModuleType = 'web-themes'
-
-    buildDir = file('../build/scss-themes')
-
-    sourceSets {
-        main {
-            java {
-                srcDir '.'
-            }
-            resources {
-                srcDir '.'
-            }
-        }
-    }
-}
-
 
 configure(coreModule) {
 
@@ -196,9 +173,6 @@ configure(webModule) {
         appName = 'app'
         appJars('app-global', 'app-gui', 'app-web')
     }
-    task buildScssThemes(type: CubaWebScssThemeCreation)
-    task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
-    assemble.dependsOn buildScssThemes
 }
 
 
