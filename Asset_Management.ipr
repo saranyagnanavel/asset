@@ -7,8 +7,6 @@
       <entry name=".+\.(gif|png|jpeg|jpg)"/>
     </resourceExtensions>
     <wildcardResourcePatterns>
-      <entry name="!?*.class"/>
-      <entry name="!?*.scala"/>
       <entry name="!?*.java"/>
       <entry name="!?*.groovy"/>
     </wildcardResourcePatterns>
@@ -17,6 +15,13 @@
   </component>
   <component name="CopyrightManager" default="default">
     <module2copyright/>
+    <copyright>
+      <option name="notice" value="TODO Copyright"/>
+      <option name="keyword" value="Copyright"/>
+      <option name="allowReplaceKeyword" value=""/>
+      <option name="myName" value="default"/>
+      <option name="myLocal" value="true"/>
+    </copyright>
     <copyright>
       <option name="notice" value="TODO Copyright"/>
       <option name="keyword" value="Copyright"/>
@@ -55,11 +60,11 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module filepath="$PROJECT_DIR$/Asset_Management.iml" fileurl="file://$PROJECT_DIR$/Asset_Management.iml"/>
-      <module filepath="$PROJECT_DIR$/modules/core/app-core.iml" fileurl="file://$PROJECT_DIR$/modules/core/app-core.iml"/>
-      <module filepath="$PROJECT_DIR$/modules/global/app-global.iml" fileurl="file://$PROJECT_DIR$/modules/global/app-global.iml"/>
-      <module filepath="$PROJECT_DIR$/modules/gui/app-gui.iml" fileurl="file://$PROJECT_DIR$/modules/gui/app-gui.iml"/>
-      <module filepath="$PROJECT_DIR$/modules/web/app-web.iml" fileurl="file://$PROJECT_DIR$/modules/web/app-web.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/Asset_Management.iml" filepath="$PROJECT_DIR$/Asset_Management.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/modules/core/app-core.iml" filepath="$PROJECT_DIR$/modules/core/app-core.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/modules/global/app-global.iml" filepath="$PROJECT_DIR$/modules/global/app-global.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/modules/gui/app-gui.iml" filepath="$PROJECT_DIR$/modules/gui/app-gui.iml"/>
+      <module fileurl="file://$PROJECT_DIR$/modules/web/app-web.iml" filepath="$PROJECT_DIR$/modules/web/app-web.iml"/>
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-type="JavaSDK" assert-jdk-15="true" project-jdk-name="1.8">
